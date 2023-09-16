@@ -1,0 +1,58 @@
+.main {
+    width: 250px;
+    display: none;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-top-right-radius: 45px;
+        border-bottom-right-radius: 45px;
+        border: 1px solid #0000004D;
+    }
+
+    .logo {
+        margin: 3rem 20px;
+    }
+
+    .game {
+        margin-inline: 28px;
+    }
+
+    .logout {
+        margin: 28px;
+    }
+
+    .routeLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .route {
+            display: flex;
+            align-items: center;
+            padding: 2rem 0;
+            padding-left: 42px;
+            gap: 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .routeText {
+                font-size: 20px;
+                font-weight: 700;
+                color: #666666;
+            }
+        }
+
+        .routeAlt {
+            background: #BE123C1A;
+            border-right: 6px solid #BE123C;
+
+            .routeText {
+                color: #BE123C;
+            }
+        }
+    }
+}

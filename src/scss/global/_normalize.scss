@@ -1,0 +1,40 @@
+@use '../utils'as utils;
+@use './colors'as *;
+@use '../utils/functions'as fn;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke-width: 0.1px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: fn.rem(16);
+  background-color: $background;
+  color: $text;
+}
+
+::-webkit-scrollbar {
+  display: inline-flex;
+  width: .25vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, $rose-bold);
+  border-radius: 20px;
+}

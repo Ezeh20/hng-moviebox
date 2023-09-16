@@ -1,0 +1,25 @@
+.casting {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .castContent {
+        @extend .casting;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: .5rem;
+        font-size: 16px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+
+        .role {
+            color: #333333;
+        }
+
+        .name {
+            color: #BE123C;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.video {
+    width: 100%;
+    height: 449px;
+
+    @media screen and (min-width:1440px) {
+        height: 650px;
+    }
+}

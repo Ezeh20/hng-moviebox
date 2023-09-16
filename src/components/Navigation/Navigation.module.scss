@@ -1,0 +1,101 @@
+@use '../../scss/utils/functions'as fn;
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: fn.rem(170);
+    z-Index: 1;
+    padding: fn.rem(18) 0;
+
+    @media screen and (min-width:768px) {
+        padding: fn.rem(24) 0;
+    }
+
+    @media screen and (min-width:1024px) {
+        height: initial;
+    }
+
+    .nav {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .lgi {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @media screen and (min-width:768px) {
+                gap: 1.5rem;
+            }
+
+            .text {
+                font-size: fn.rem(16);
+                color: #ffff;
+                font-weight: 700;
+
+                @media screen and (max-width:320px) {
+                    font-size: fn.rem(12);
+                }
+            }
+
+            .textAlt {
+                @media screen and (min-width:768px) {
+                    font-size: fn.rem(24);
+                }
+            }
+        }
+
+        .inputContainer {
+            position: absolute;
+            top: 5rem;
+            width: 100%;
+
+            @media screen and (min-width:1024px) {
+                max-width: fn.rem(525);
+                position: relative;
+                top: 0;
+                display: flex;
+            }
+
+            .input {
+                width: 100%;
+                background: transparent;
+                outline: none;
+                border: 1px solid rgba(255, 255, 255, .8);
+                color: #ffff;
+                font-size: fn.rem(16);
+                border-radius: fn.rem(6);
+                padding: fn.rem(12);
+            }
+
+            .input::placeholder {
+                color: #ffff;
+                opacity: 1;
+            }
+
+            .searchIcon {
+                position: absolute;
+                top: -2px;
+                right: 0;
+                width: fn.rem(48);
+                height: fn.rem(48);
+                padding: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.25);
+                }
+
+                @media screen and (min-width:1024px) {
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
+
+.changeBg {
+    background-color: rgba(0, 0, 0, .3);
+}
